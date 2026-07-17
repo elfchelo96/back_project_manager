@@ -2,17 +2,33 @@
 
 Backend de Gestion de Proyectos e Incidencias (estilo Redmine / Jira / OpenProject), construido con **Laravel 12**, **PHP 8.4+** y **PostgreSQL**, usando **Laravel Sanctum** para autenticacion por tokens y **Spatie Laravel Permission** para roles y permisos. La API expone unicamente JSON y sigue una arquitectura por capas (Controllers -> Services -> Repositories -> Models) con Policies para autorizacion a nivel de objeto.
 
+## ¿De qué trata el proyecto?
+
+**Project Manager API** es el backend de una plataforma para planificar, organizar y dar seguimiento al trabajo de equipos. Centraliza la gestión de proyectos, tareas e incidencias, de modo que administradores, project managers y colaboradores puedan trabajar con información actualizada y según los permisos de su rol.
+
+La API permite:
+
+- Crear proyectos, incorporar miembros y definir categorías de trabajo.
+- Gestionar tareas y subtareas con responsables, prioridades, estados, fechas y dependencias.
+- Registrar comentarios, archivos adjuntos y horas trabajadas por tarea.
+- Mantener documentación de cada proyecto mediante páginas wiki.
+- Consultar un panel general, notificaciones y reportes de avance, productividad y horas registradas.
+- Administrar usuarios, roles y permisos para controlar el acceso a cada función.
+
+Está pensada para integrarse con un frontend web o móvil que consuma sus endpoints JSON, proporcionando una base sólida para soluciones de gestión de proyectos similares a Jira, Redmine u OpenProject.
+
 ## Tabla de contenidos
 
-1. [Stack tecnologico](#stack-tecnologico)
-2. [Instalacion](#instalacion)
-3. [Credenciales por defecto](#credenciales-por-defecto)
-4. [Arquitectura y decisiones de diseno](#arquitectura-y-decisiones-de-diseno)
-5. [Modelo de autorizacion](#modelo-de-autorizacion)
-6. [Formato de respuesta](#formato-de-respuesta)
-7. [Endpoints de la API](#endpoints-de-la-api)
-8. [Testing](#testing)
-9. [Limitaciones conocidas](#limitaciones-conocidas)
+1. [¿De qué trata el proyecto?](#de-qué-trata-el-proyecto)
+2. [Stack tecnologico](#stack-tecnologico)
+3. [Instalacion](#instalacion)
+4. [Credenciales por defecto](#credenciales-por-defecto)
+5. [Arquitectura y decisiones de diseno](#arquitectura-y-decisiones-de-diseno)
+6. [Modelo de autorizacion](#modelo-de-autorizacion)
+7. [Formato de respuesta](#formato-de-respuesta)
+8. [Endpoints de la API](#endpoints-de-la-api)
+9. [Testing](#testing)
+10. [Limitaciones conocidas](#limitaciones-conocidas)
 
 ## Stack tecnologico
 
