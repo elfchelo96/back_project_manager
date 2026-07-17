@@ -205,5 +205,5 @@ Las pruebas (`tests/Feature/AuthTest.php`, `ProjectTest.php`, `TaskTest.php`, `R
 
 - Los scopes `scopeSearch` de `User`, `Project` y `Task` usan el operador `ilike`, exclusivo de PostgreSQL. Funcionan correctamente en el entorno de produccion (Postgres) pero **no son compatibles con SQLite**; por eso las pruebas automatizadas no ejercitan el parametro `search` de los listados. Si necesita correr pruebas de busqueda, hagalo contra una base Postgres de pruebas o adapte el scope para usar `LOWER(...) LIKE LOWER(...)`.
 - El codigo de este repositorio fue validado con `php -l` (analisis de sintaxis) sobre los 150+ archivos PHP, pero no pudo ejecutarse `composer install` ni `php artisan test` dentro del entorno donde se genero este proyecto, ya que dicho entorno no tiene acceso de red a `packagist.org`. Se recomienda ejecutar `composer install` y `php artisan test` apenas se complete la instalacion local para confirmar que todo funciona end-to-end.
-#   b a c k _ p r o j e c t _ m a n a g e r  
+#
  
